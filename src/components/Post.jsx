@@ -1,8 +1,12 @@
-function Post() {
-    return (<div>
-        <p>Süleyman</p>
-        <p>I just started learning React.js</p>
-    </div>
+import classes from './Post.module.css';
+/* eslint-disable react/prop-types */
+
+function Post(props) {
+    return (
+        <li className={classes.post}>
+            <p className={classes.author}>{props.author}</p>
+            <p className={classes.text}>{props.body}</p>
+        </li>
     );
 }
 
